@@ -1,0 +1,313 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.header {
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: white;
+    animation: header-box linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 40vh;
+    position: fixed;
+    z-index: -1;
+    border: .5px solid #aaa;
+}
+
+@keyframes header-box {
+    to {
+        z-index: 2;
+        opacity: 1;
+    }
+}
+
+.header h1 {
+    flex: 2;
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+
+.header h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.menu li {
+    padding: 10px;
+    list-style-type: none;
+}
+
+.menu a {
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    color: #777;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.main header {
+    margin-top: 100px;
+}
+
+.contain {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    background: #9bdfff;
+    grid-template-columns:  1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+@media (width < 700px ) {
+    .contain {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contain img {
+    margin: 100px 50px;
+    border-radius: 280px;
+    width: 75%;
+    height: auto;
+    object-fit: cover;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: end;
+}
+
+.contain h2 {
+    font-size: 60px;
+    align-self: end;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.contain h3 {
+    font-size: 30px;
+}
+
+.containInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.containInfo header {
+    padding: 20px;
+}
+
+.containInfo header h2, .containProy h2, .containTecno h2, .contacto h2{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.containInfo .info {
+    width: 50%;
+    padding: 10px;
+    background: #ffffff99;
+    border-radius: 10px;
+}
+
+.containInfo .info-p {
+    border-left: 2px solid #9bdfff;
+    padding: 30px;
+    color: #555;
+    font-size: 20px;
+}
+
+.containProy {
+    width: 100%;
+}
+
+.proyecto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+.proyecto  h3, h4 {
+    grid-column: 1/3; 
+}
+
+.proyecto h3 {
+    font-size: 30px;
+}
+
+.proyecto p {
+    padding: 40px;
+    font-size: 20px;
+    color: #555;
+    border-right: 2px solid #9bdfff;
+    align-self: center;
+}
+
+.proyecto .proyecto_fotos {
+    justify-self: center;
+    display: flex;
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.proyecto .proyecto_fotos button {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    width: 30px;
+    position: absolute;
+    height: 100%;
+    border: none;
+    background-color: #00000033;
+    z-index: 1;
+    transition: background 0.3s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.proyecto .proyecto_fotos .btn1, .proyecto .proyecto_fotos .btn3 { 
+    left: 0;
+}
+
+.proyecto .proyecto_fotos .btn2, .proyecto .proyecto_fotos .btn4 {
+    right: 0;
+}
+
+.proyecto .proyecto_fotos .btn1:hover, .proyecto .proyecto_fotos .btn2:hover , .proyecto .proyecto_fotos .btn3:hover, .proyecto .proyecto_fotos .btn4:hover {
+    background-color: #00000099;
+}
+
+.proyecto .proyecto_fotos img{
+    width: 100%;
+}
+
+
+.proyecto h4 {
+    font-size: 25px;
+}
+
+.proyecto li {
+    font-weight: bold;
+    font-style: italic;
+    list-style-type: none;
+    font-size: 20px;
+    display: inline-block;
+    margin: 10px 20px;
+}
+.proyecto .proyecto_btns {
+    justify-self: center;
+}
+
+.proyecto a {
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    width: 10em;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    transition: background 0.3s;
+    height: 20px;
+}
+
+.proyecto a:hover {
+    background-color: #eee;
+}
+
+.containTecno {
+    width: 100%;
+} 
+
+.containTecno .tecnologia ul {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.tecnologia li {
+    list-style-type: none;
+}
+
+.tecnologia img {
+    width: 100px;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 100px;
+}
+
+.contacto_info {
+    margin-top: 30px;
+    width: auto;
+    height: 100%;
+    box-shadow: 0 0 3px #000000aa;
+    border-radius: 10px;
+    background: linear-gradient(45deg,white, #9bdfff);
+
+}
+
+.contacto_info p {
+    margin: 30px 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.contacto_info p a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 5px;
+    box-shadow: 0 0 2px #000;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.contacto p a:hover {
+    background: #fff7;
+}
+
+.contacto_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.contacto_info img {   
+    width: 70px;
+}
