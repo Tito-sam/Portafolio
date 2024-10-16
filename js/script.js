@@ -12,8 +12,9 @@ let slider_2 = 0;
 
 const moverSlideIzq1 = () => {
     if (slider_1 >= 0  && slider_1 < sliders_1.length - 1) {
-        let pixeles = (slider_1 + 1) * 500;
+        let pixeles = (slider_1 + 1) * sliders_1[0].offsetWidth;
         let mover = "translateX(-" + pixeles + "px)";
+        console.log(mover)
         const keyframes = [
             { transform: mover,
             opacity: 1,
@@ -33,8 +34,10 @@ const moverSlideIzq1 = () => {
 
 const moverSlideDer1 = () => {
     if (slider_1 <= sliders_1.length - 1 && slider_1 > 0) {
+        let pixeles = (slider_1 + 1) * sliders_1[0].offsetWidth;
+        let mover = "translateX(" + pixeles + "px)";
         const keyframes1 = [
-            { transform: "translateX(500px)",
+            { transform: mover,
             }
           ];
           const options1 = {
@@ -50,7 +53,7 @@ const moverSlideDer1 = () => {
 
 const moverSlideIzq2 = () => {
     if (slider_2 >= 0  && slider_2 < sliders_2.length - 1) {
-        let pixeles = (slider_2 + 1) * 500;
+        let pixeles = (slider_2 + 1) * sliders_2[0].offsetWidth;
         let mover = "translateX(-" + pixeles + "px)";
         const keyframes = [
             { transform: mover,
@@ -70,8 +73,10 @@ const moverSlideIzq2 = () => {
 
 const moverSlideDer2 = () => {
     if (slider_2 <= sliders_2.length - 1 && slider_2 > 0) {
+        let pixeles = (slider_2 + 1) * sliders_2[0].offsetWidth;
+        let mover = "translateX(" + pixeles + "px)";
         const keyframes1 = [
-            { transform: "translateX(500px)",
+            { transform: mover,
             }
           ];
           const options1 = {
